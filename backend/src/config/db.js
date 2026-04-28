@@ -3,12 +3,11 @@ const mongoose = require("mongoose");
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI, {
-      family: 4, // 🔥 THIS LINE FIXES DNS ISSUE
+      family: 4, // Force IPv4 to avoid DNS resolution issues on some hosts
     });
-
     console.log("✅ MongoDB Connected:", conn.connection.host);
-  } catch (error) {
-    console.error("❌ MongoDB connection failed:", error.message);
+  } catch (err) {
+    console.error("❌ MongoDB connection failed:", err.message);
     process.exit(1);
   }
 };
