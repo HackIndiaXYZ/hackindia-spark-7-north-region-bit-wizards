@@ -1,10 +1,15 @@
 node_modules/
 backend/node_modules/
-node_modules/
-backend/node_modules/
 backend/**/node_modules/
+
 .env
+
 dist/
 build/
-backend_compressed (2).zip evi-frontend-myapp.zip
-backend_compressed (2).zip
+
+# zip files
+*.zip
+
+# uploads (keep placeholder)
+backend/uploads/*
+!backend/uploads/.gitkeep

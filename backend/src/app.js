@@ -17,7 +17,10 @@ const evidenceRoutes = require("./routes/evidence.routes");
 // ─── 4. Create the Express app ────────────────────────────────────────────────
 // Think of `app` as the actual web server object
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "http://localhost:3000",
+  methods: ["GET", "POST"],
+}));
 
 // ─── 5. Built-in Middleware ───────────────────────────────────────────────────
 // This tells Express: "if someone sends JSON in the request body, parse it"
