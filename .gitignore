@@ -6,3 +6,5 @@ backend/**/node_modules/
 .env
 dist/
 build/
+backend_compressed (2).zip evi-frontend-myapp.zip
+backend_compressed (2).zip
